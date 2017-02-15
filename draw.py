@@ -8,7 +8,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
         print(str(a) + " " + str(b))
 
         #Oct 1
-        if(a<-b and a>0 and b<0):
+        if(a<=-b and a>=0 and b<=0):
             print("1\n")
             d = 2*a + b
 
@@ -36,7 +36,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d+=2*b
 
         #Oct 7
-        if(-a>-b and a<0 and b<0):
+        if(a<=b and a<=0 and b<=0):
             print("7\n")
             d = -2*b + a
 
@@ -50,7 +50,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d-=2*b
 
         #Oct 8
-        if(-a<-b and a<0 and b<0):
+        if(a<b and a<0 and b<0):
             print("8\n")
             d = 2*a - b
 
@@ -67,9 +67,11 @@ def draw_line( screen, x0, y0, x1, y1, color ):
         a = y0 - y1
         b = -(x0 - x1)
         c = -b*b
+        print(str(a) + " " + str(b))
 
         #Oct 5
-        if(a<-b and a>0 and b<0):
+        if(a<=-b and a>=0 and b<0):
+            print("5\n")
             d = 2*a + b
 
             while x1<=x0:
@@ -83,6 +85,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 6
         if(a>-b and a>0 and b<0):
+            print("6\n")
             d = 2*b + a
 
             while y1<=y0:
@@ -95,12 +98,13 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d+=2*b
 
         #Oct 3
-        if(a>b and a<0 and b<0):
+        if(-a>=-b and a<=0 and b<=0):
+            print("3\n")
             d = -2*b + a
 
             while y1>=y0:
                 plot(screen, color, x1, y1)
-                if d<0:
+                if d>0:
                     x1+=1
                     d+=2*a
 
@@ -108,7 +112,8 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d-=2*b
 
         #Oct 4
-        if(a<b and a<0 and b<0):
+        if(-a<-b and a<0 and b<0):
+            print("4\n")
             d = 2*a - b
 
             while x1<=x0:
@@ -117,5 +122,5 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                     y1-=1
                     d-=2*b
 
-            x1+=1
-            d+=2*a
+                x1+=1
+                d+=2*a
