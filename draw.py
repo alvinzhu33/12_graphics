@@ -5,11 +5,11 @@ def draw_line( screen, x0, y0, x1, y1, color ):
         a = y1 - y0
         b = -(x1 - x0)
         c = -b*b
-        print(str(a) + " " + str(b))
+        #print(str(a) + " " + str(b))
 
         #Oct 1
         if(a<=-b and a>=0 and b<=0):
-            print("1\n")
+            #print("1\n")
             d = 2*a + b
 
             while x0<x1:
@@ -23,7 +23,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 2
         if(a>-b and a>0 and b<0):
-            print("2\n")
+            #print("2\n")
             d = 2*b + a
 
             while y0<y1:
@@ -37,7 +37,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 7
         if(a<=b and a<=0 and b<=0):
-            print("7\n")
+            #print("7\n")
             d = -2*b + a
 
             while y0>y1:
@@ -51,7 +51,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 8
         if(a>b and a<0 and b<0):
-            print("8\n")
+            #print("8\n")
             d = 2*a - b
 
             while x0<x1:
@@ -67,11 +67,11 @@ def draw_line( screen, x0, y0, x1, y1, color ):
         a = y0 - y1
         b = -(x0 - x1)
         c = -b*b
-        print(str(a) + " " + str(b))
+        #print(str(a) + " " + str(b))
 
         #Oct 5
         if(a<=-b and a>=0 and b<0):
-            print("5\n")
+            #print("5\n")
             d = 2*a + b
 
             while x1<=x0:
@@ -85,7 +85,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 6
         if(a>=-b and a>=0 and b<=0):
-            print("6\n")
+            #print("6\n")
             d = 2*b + a
 
             while y1<=y0:
@@ -99,7 +99,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 3
         if(-a>=-b and a<=0 and b<=0):
-            print("3\n")
+            #print("3\n")
             d = -2*b + a
 
             while y1>=y0:
@@ -113,7 +113,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
 
         #Oct 4
         if(-a<-b and a<0 and b<0):
-            print("4\n")
+            #print("4\n")
             d = 2*a - b
 
             while x1<=x0:

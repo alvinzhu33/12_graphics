@@ -1,3 +1,4 @@
+import math
 from display import *
 from draw import *
 
@@ -7,6 +8,7 @@ color = [ 0, 255, 0 ]
 #for y in range(0,500,5):
 #    draw_line(screen, 0, 0, 500, y, color)
 
+'''
 draw_line(screen, 250, 250, 500, 250, [75,75,75])
 draw_line(screen, 250, 250, 500, 300, [255,0,0])#1R
 draw_line(screen, 250, 250, 500, 500, [100,100,100])#1.5
@@ -26,6 +28,26 @@ draw_line(screen, 250, 250, 250, 0, [225,225,225])
 draw_line(screen, 250, 250, 300, 0, [255,0,255])#7M
 draw_line(screen, 250, 250, 500, 0, [250,250,250])
 draw_line(screen, 250, 250, 500, 200, [125,114,57])#8W
+'''
+
+for x in range(0, 500):
+    for y in range(0,500):
+        formula = math.sqrt( math.pow(250-x, 2) + math.pow(250-y, 2))
+        if(formula>224.95 and formula < 225.05):
+            draw_line(screen, 250, 250, x, y, [0,abs(255-x),abs(255-y)])
+
+
+draw_line(screen, 250, 250, 500, 250, [75,75,75])
+draw_line(screen, 250, 250, 500, 500, [100,100,100])#1.5
+
+draw_line(screen, 250, 250, 250, 500, [125,125,125])
+draw_line(screen, 250, 250, 0, 500, [150,150,150])#2O
+
+draw_line(screen, 250, 250, 0, 250, [175,175,175])
+draw_line(screen, 250, 250, 0, 0, [200,200,200])
+
+draw_line(screen, 250, 250, 250, 0, [225,225,225])
+draw_line(screen, 250, 250, 500, 0, [250,250,250])
 
 display(screen)
 save_extension(screen, 'img.png')
