@@ -25,7 +25,7 @@ draw_line(screen, 250, 250, 200, 0, [0,0,255])#6B
 draw_line(screen, 250, 250, 250, 0, [225,225,225])
 draw_line(screen, 250, 250, 300, 0, [255,0,255])#7M
 draw_line(screen, 250, 250, 500, 0, [250,250,250])
-draw_line(screen, 250, 250, 500, 200, [255,255,255])#8W
+draw_line(screen, 250, 250, 500, 200, [125,114,57])#8W
 
 display(screen)
 save_extension(screen, 'img.png')

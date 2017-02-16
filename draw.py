@@ -50,7 +50,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d-=2*b
 
         #Oct 8
-        if(a<b and a<0 and b<0):
+        if(a>b and a<0 and b<0):
             print("8\n")
             d = 2*a - b
 
@@ -84,7 +84,7 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                 d+=2*a
 
         #Oct 6
-        if(a>-b and a>0 and b<0):
+        if(a>=-b and a>=0 and b<=0):
             print("6\n")
             d = 2*b + a
 
